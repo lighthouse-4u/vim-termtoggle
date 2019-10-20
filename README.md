@@ -1,5 +1,5 @@
 # vim-termtoggle
-Easily toggle a terminal at the bottom of your screen
+Easily toggle a terminal at the bottom of your screen with :TermToggle
 
 
 ## Installation    
@@ -7,7 +7,6 @@ Easily toggle a terminal at the bottom of your screen
 With pathogen:    
 ```shell
 cd ~/.vim/bundle && \    
-
 git clone https://github.com/KaraMCC/vim-termtoggle.git    
 ```    
     
@@ -27,7 +26,14 @@ Plugin 'KaraMCC/vim-termtoggle'
 ```                                                                                   
                 
                 
-## Settings                                                                            
+## Settings             
+Easily toggle terminal with Ctrl+t by putting this in your .vimrc
+```vim
+nnoremap <silent> <C-t> :TermToggle <CR>    
+tnoremap <silent> <C-t> <C-\><C-n>:TermToggle <CR>    
+inoremap <silent> <C-t> <C-o>:TermToggle <CR>
+```
+
 Show line numbers in the terminal with (Default: 0)
 ```vim
 let g:toggleterm_numbers = 1
