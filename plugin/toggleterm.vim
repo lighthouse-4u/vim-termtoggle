@@ -24,6 +24,7 @@ function s:OpenTerminal()
     else
         exec 'buffer ' . s:terminal_buffer
     endif
+    startinsert
 
     let s:terminal_buffer = bufnr('')
     let s:terminal_id = win_getid()
@@ -38,7 +39,6 @@ function s:CreateTerminal()
     else
         set nonumber
     endif
-    startinsert
 endfunction
 
 command! TermToggle call s:ToggleTerminal()
